@@ -276,16 +276,17 @@ body {
 }
 
 #play h2 {
-  color: white;
+  color:#002266;
   font-family: 'Didact Gothic', sans-serif;
   font-size: 36px;
   text-align: center;
   padding-bottom: 20px;
-  border-bottom: 2px solid white;
+  border-bottom: 4px solid #ff5533;
 }
 
 .play-section {
   margin-top: 40px;
+  border-bottom: 4px solid #ff5533;
   width: 100%;
 }
 
@@ -310,7 +311,7 @@ body {
 .starfall-emphasis {
   font-weight: bold;
   font-size: 20px;
-  color: cyan;
+  color: #002266;
 }
 
 .starfall-link {
@@ -318,7 +319,7 @@ body {
   font-family: 'Didact Gothic', sans-serif;
   text-decoration: none;
   display: flex;
-  color: aqua;
+  color: #002266;
 }
 
 .starfall-link:hover {
@@ -343,7 +344,7 @@ body {
   margin-bottom: 2%;
   width: 80%;
   padding: 8px;
-  border: 2px solid #99BBFF;;
+  border: 2px solid #ff5533;
   border-radius: 8px;
   line-height: 1.5;
 }
@@ -357,7 +358,7 @@ body {
   display: flex;
   font-size: 24px;
   text-decoration: none;
-  color: aqua;
+  color: #002266;
 }
 
 .source-code-link:hover {
@@ -373,7 +374,7 @@ height: 100%;
 }
 
 #work h2 {
-  color: white;
+  color: #002266;
   font-family: 'Didact Gothic', sans-serif;
   font-size: 36px;
   text-align: center;
@@ -382,20 +383,20 @@ height: 100%;
 .work-header {
   display: flex;
   flex-direction: column;
-  border-bottom: 2px solid white;
+  border-bottom: 4px solid #ff5533;
 }
 
 .work-header h2 {
   padding-bottom: 20px;
-  border-bottom: 2px solid white;
+  border-bottom: 4px solid #ff5533;
 }
 
 .work-header-span-top {
   display: block;
   text-align: center;
-  color: white;
+  color: #3377FF;
   font-size: 24px;
-  font-weight: 100;
+  font-weight: 400;
   margin-top: 1em;
   margin-bottom: 1em;
   margin-left: 2%;
@@ -403,9 +404,9 @@ height: 100%;
 }
 
 .work-header ul {
-  color: white;
+  color: #3377FF;
   font-size: 30px;
-  font-weight: 100;
+  font-weight: 300;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1em;
@@ -413,11 +414,11 @@ height: 100%;
 }
 
 .work-header ul li span {
-  color: aqua;
+  color: #002266;
 }
 
 .projects-flex-div {
-  color: white;
+  color:#3377FF;
   font-family: 'Open Sans', sans-serif;
   display: flex;
   flex-direction: column;
@@ -426,7 +427,7 @@ height: 100%;
 
 .project {
   margin-top: 40px;
-  border-bottom: 2px solid white;
+  border-bottom: 4px solid #ff5533;
   width: 100%;
 }
 
@@ -451,7 +452,7 @@ height: 100%;
 .project-emphasis {
   font-weight: bold;
   font-size: 20px;
-  color: cyan;
+  color: #002266;
 }
 
 .project-link {
@@ -459,7 +460,7 @@ height: 100%;
   font-family: 'Didact Gothic', sans-serif;
   text-decoration: none;
   display: flex;
-  color: aqua;
+  color: #002266;
 }
 
 .project-link:hover {
@@ -485,7 +486,7 @@ height: 100%;
   margin-bottom: 2%;
   width: 80%;
   padding: 8px;
-  border: 2px solid #99BBFF;
+  border: 2px solid #ff5533;
   border-radius: 8px;
   line-height: 1.5;
 }
@@ -509,21 +510,21 @@ height: 100%;
 }
 
 .connect-flex-div span {
-  color: white;
+  color:#3377FF;
   font-size: 24px;
 }
 
 .connect-emphasis {
   font-weight: bold;
   font-size: 30px;
-  color: cyan;
+  color: #002266;
 }
 
 .connect-flex-div a {
   display: inline;
   margin-left: 2%;
   font-size: 48px;
-  color: aqua;
+  color: #002266;
 }
 
 .connect-flex-div a:hover {

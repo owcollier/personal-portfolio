@@ -7,6 +7,8 @@ const renderTheDangPage = function (store) {
   console.log(store.view);
 };
 
+
+
 const triggerInsanity = function (event) {
   event.preventDefault();
   const store = event.data;
