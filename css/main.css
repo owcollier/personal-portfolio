@@ -105,8 +105,20 @@ body {
   text-shadow: 1px 3px 0px #99BBFF;
 }
 
-.top-nav-links a:hover {
-  font-size: 48px;
+.top-nav-links svg {
+  transition: transform 1s;
+}
+
+.top-nav-links svg:hover {
+  transform: rotate(360deg);
+}
+
+.top-nav-link {
+  transition: transform 0.8s;
+}
+
+.top-nav-link:hover {
+  transform: scale(1.2);
 }
 
 /* styles for home page image */
@@ -120,10 +132,16 @@ body {
   margin-top: 30px;
   margin-bottom: 30px;
   cursor: pointer;
+  transition: transform 1s;
+}
+
+.home-image:hover {
+  transform: skewX(-20deg);
 }
 
 .home-image:active {
   opacity: 0.5;
+  transform: scale(1.4);
 }
 
 /* styles for home page easter egg */
