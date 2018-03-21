@@ -89,22 +89,20 @@ body {
 
 .top-nav-links {
   font-family: 'Didact Gothic', sans-serif;
-  margin: 10px 120px;
+  margin: 0px 120px;
   padding: 10px;
   list-style-type: none;
   font-size: 36px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: white;
-  background: linear-gradient(rgba(51, 119, 255, 1), rgba(51, 119, 255, 0.500));
-  border-radius: 12px;
+  color: midnightblue;
 }
 
 .top-nav-links a {
   color: inherit;
   text-decoration: none;
-  /* text-shadow: 1px 3px 0px #99BBFF; */
+  text-shadow: 1px 3px 0px #99BBFF;
 }
 
 .top-nav-links a:hover {
@@ -346,8 +344,8 @@ body {
   margin-bottom: 2%;
   width: 80%;
   padding: 8px;
-  background: linear-gradient(rgba(51, 119, 255, 1), rgba(51, 119, 255, 0.500));
-  border-radius: 12px;
+  border: 2px solid #ff5533;
+  border-radius: 8px;
   line-height: 1.5;
 }
 
@@ -536,14 +534,13 @@ body {
   /* mobile styles for top-nav */
 
   .header-name {
-    font-size: 36px;
+    font-size: 24px;
   }
 
   .top-nav-links {
     justify-content: center;
-    font-size: 30px;
+    font-size: 24px;
     margin: 0px 0px;
-    border-radius: 0px;
   }
 
   .top-nav-links a:hover {
