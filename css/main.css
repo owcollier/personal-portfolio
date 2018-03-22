@@ -1,6 +1,6 @@
 body {
   background-color: #F9F3E7;
-  font-family: sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 /* header styles for name and borders */
@@ -151,10 +151,10 @@ body {
   height: 40%;
   width: 40%;
   display: block;
+  border-radius: 100%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  padding: 3em;
   cursor: pointer;
   transition: transform 1s;
 }
@@ -265,7 +265,6 @@ body {
   text-align: center;
   font-weight: 600;
   font-size: 20px;
-  font-family: 'Open Sans', sans-serif;
   margin-left: 2%;
   margin-right: 2%;
   color:#002266;
@@ -319,9 +318,9 @@ body {
 
 #play h2 {
   color:#002266;
-  font-family: 'Didact Gothic', sans-serif;
   font-size: 36px;
   text-align: center;
+  margin-top: 2em;
   padding-bottom: 20px;
   border-bottom: 4px solid #ff5533;
 }
@@ -358,7 +357,6 @@ body {
 
 .starfall-link {
   font-size: 36px;
-  font-family: 'Didact Gothic', sans-serif;
   text-decoration: none;
   display: flex;
   color: #002266;
@@ -417,19 +415,14 @@ body {
 
 #work h2 {
   color: #002266;
-  font-family: 'Didact Gothic', sans-serif;
   font-size: 36px;
   text-align: center;
 }
 
 .work-header {
+  margin-top: 2em;
   display: flex;
   flex-direction: column;
-  border-bottom: 4px solid #ff5533;
-}
-
-.work-header h2 {
-  padding-bottom: 20px;
   border-bottom: 4px solid #ff5533;
 }
 
@@ -438,21 +431,21 @@ body {
   text-align: center;
   color: #3377FF;
   font-size: 24px;
-  font-weight: 400;
+  font-weight: 300;
   margin-top: 1em;
   margin-bottom: 1em;
-  margin-left: 2%;
-  margin-right: 2%;
 }
 
-.work-header ul {
-  color: #3377FF;
+.work-header-span-bottom {
+  text-align: center;
   font-size: 30px;
-  font-weight: 300;
-  margin-left: auto;
-  margin-right: auto;
+  font-weight: bold;
   margin-bottom: 1em;
-  list-style-type: disc;
+  color: #3377FF;
+}
+
+.tech {
+  color: #002266;
 }
 
 .work-header ul li span {
@@ -461,7 +454,6 @@ body {
 
 .projects-flex-div {
   color:#3377FF;
-  font-family: 'Open Sans', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -469,7 +461,6 @@ body {
 
 .project {
   margin-top: 40px;
-  border-bottom: 4px solid #ff5533;
   width: 100%;
 }
 
@@ -487,19 +478,17 @@ body {
 
 .project-descrip-2 {
   margin-left: 2%;
-  font-size: 18px;
-  font-weight: 100;
+  font-size: 20px;
+  font-weight: 300;
 }
 
 .project-emphasis {
-  font-weight: bold;
   font-size: 20px;
   color: #002266;
 }
 
 .project-link {
   font-size: 36px;
-  font-family: 'Didact Gothic', sans-serif;
   text-decoration: none;
   display: flex;
   color: #002266;
@@ -528,8 +517,6 @@ body {
   margin-bottom: 2%;
   width: 80%;
   padding: 8px;
-  border: 2px solid #ff5533;
-  border-radius: 8px;
   line-height: 1.5;
 }
 
@@ -651,11 +638,11 @@ body {
   }
 
   .work-header-span-top {
-    font-size: 16px;
+    font-size: 14px;
   }
 
-  .work-header ul {
-    font-size: 20px;
+  .work-header-span-bottom {
+    font-size: 16px;
   }
 
   .project-descrip {
