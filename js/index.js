@@ -9,21 +9,21 @@ const renderTheDangPage = function (store) {
 
 
 
-const triggerInsanity = function (event) {
-  event.preventDefault();
-  const store = event.data;
-  if (store.insanity) {
-    store.insanity = !store.insanity;
-    $('svg').show();
-    $('.insanity-background').hide();
-    $('.cascade').hide();
-  } else {
-    store.insanity = !store.insanity;
-    $('svg').hide();
-    $('.insanity-background').show();
-    $('.cascade').show();
-  }
-};
+// const triggerInsanity = function (event) {
+//   event.preventDefault();
+//   const store = event.data;
+//   if (store.insanity) {
+//     store.insanity = !store.insanity;
+//     $('svg').show();
+//     $('.insanity-background').hide();
+//     $('.cascade').hide();
+//   } else {
+//     store.insanity = !store.insanity;
+//     $('svg').hide();
+//     $('.insanity-background').show();
+//     $('.cascade').show();
+//   }
+// };
 
 const showTheDangWork = function (event) {
   event.preventDefault();
@@ -60,8 +60,8 @@ jQuery(function ($) {
     insanity: false
   };
 
-  $(document).on('click', '.home-image', TRL_LIVE, triggerInsanity);
-  $(document).on('click', '.cascade', TRL_LIVE, triggerInsanity);
+  // $(document).on('click', '.home-image', TRL_LIVE, triggerInsanity);
+  // $(document).on('click', '.cascade', TRL_LIVE, triggerInsanity);
   $(document).on('click', '.viewWork', TRL_LIVE, showTheDangWork);
   $(document).on('click', '.viewHome', TRL_LIVE, showTheDangHome);
   $(document).on('click', '.viewPlay', TRL_LIVE, showTheCoolStuff);
