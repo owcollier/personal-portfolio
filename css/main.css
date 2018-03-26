@@ -4,7 +4,7 @@ body {
 }
 
 .view {
-  margin-top: 20%;
+  margin-top: 15%;
   margin-bottom: 10%;
   margin-left: 10%;
   margin-right: 10%;
@@ -198,7 +198,7 @@ body {
   width: 80%;
   border-radius: 100%;
   margin: auto;
-  cursor: pointer;
+  cursor: crosshair;
   transition: border-radius 0.8s, transform 1s;
 }
 
@@ -252,6 +252,11 @@ body {
 }
 
 .rambling-home-i-2 {
+  color: #6699FF;
+  font-weight: 600;
+}
+
+.rambling-home-i-3 {
   color: #ff5533;
   font-weight: 600;
 }
@@ -263,6 +268,10 @@ body {
   padding: 15px;
 }
 
+.rambling-home-div a {
+  color: inherit;
+}
+
 .rambling-home-div svg {
   margin-right: 25px;
   transition: transform 0.8s, color 0.5s;
@@ -271,6 +280,23 @@ body {
 .rambling-home-div svg:hover {
   cursor: pointer;
   color: #6699FF;
+}
+
+.home-angle-down {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 15px;
+  font-size: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color:#002266;
+}
+
+.home-angle-down svg {
+  color: #0044CC;
 }
 /* @media (max-width: 1000px) {
   .home-image {
