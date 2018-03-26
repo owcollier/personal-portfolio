@@ -293,10 +293,22 @@ body {
   flex-direction: column;
   align-items: center;
   color:#002266;
+  transition: transform 0.5s;
+}
+
+.home-angle-down:hover {
+  transform: scale(1.5);
+  cursor: pointer;
 }
 
 .home-angle-down svg {
   color: #0044CC;
+  transition: transform 0.5s;
+}
+
+.home-angle-down svg:hover {
+  transform: scale(1.5);
+  cursor: pointer;
 }
 /* @media (max-width: 1000px) {
   .home-image {
@@ -405,8 +417,6 @@ body {
 /* styles for work */
 
 #work {
-  padding-top: 40px;
-  width: 100%;
   height: 100%;
 }
 

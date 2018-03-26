@@ -3,7 +3,7 @@
 
 const renderTheDangPage = function (store) {
   $('.view').hide();
-  $(`#${store.view}`).show();
+  $(`#${store.view}`).fadeIn(3000);
   console.log(store.view);
 };
 
