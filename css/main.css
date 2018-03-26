@@ -5,6 +5,7 @@ body {
 
 .view {
   background-color: #F9F3E7;
+  display: none;
   margin-top: 10%;
   margin-bottom: 10%;
   margin-left: 10%;
@@ -433,6 +434,29 @@ body {
   color: #002266;
   font-size: 36px;
   text-align: center;
+}
+
+.work-angle-up {
+  position: relative;
+  width: 100%;
+  top: 0;
+  left: 0;
+  margin-bottom: 15px;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  color:#002266;
+  transition: transform 0.5s;
+}
+
+.work-angle-up svg {
+  color: #0044CC;
+  transition: transform 0.5s;
+}
+
+.work-angle-up svg:hover {
+  transform: scale(1.5);
+  cursor: pointer;
 }
 
 .work-header {

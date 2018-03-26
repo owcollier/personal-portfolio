@@ -8,13 +8,26 @@ const renderTheDangPage = function (store) {
 };
 
 const slideUpTheDangWork = function (store) {
-  $(`#${store.view}`).show();
+  $('.slider').toggleClass('close');
+  console.log(store.view);
+};
+
+const slideDownTheDangWork = function(store) {
   $('.slider').toggleClass('close');
 };
 
 const renderTheDangHome = function (store) {
+  $(`#${store.view}`).fadeIn(3000);
+  $('#work').show();
+  console.log(store.view);
+};
+
+const renderHomeHard = function (store) {
+  $('.slider').toggleClass('close');
   $('.view').hide();
   $(`#${store.view}`).fadeIn(3000);
+  $('#work').show();
+  console.log(store.view);
 };
 
 
@@ -42,6 +55,13 @@ const showTheDangWork = function (event) {
   slideUpTheDangWork(store);
 };
 
+const hideTheDangWork = function (event) {
+  event.preventDefault();
+  const store = event.data;
+  store.view = 'home';
+  slideDownTheDangWork(store);
+};
+
 const showTheCoolStuff = function (event) {
   event.preventDefault();
   const store = event.data;
@@ -59,9 +79,21 @@ const showTheDangConnect = function (event) {
 const showTheDangHome = function (event) {
   event.preventDefault();
   const store = event.data;
-  store.view = 'home';
-  renderTheDangHome(store);
+  if (store.view !== 'home') {
+    store.view = 'home';
+    renderHomeHard(store);
+  } else {
+    store.view = 'home';
+    renderTheDangHome(store);
+  }
 };
+
+// const goHome = function (event) {
+//   event.preventDefault();
+//   const store = event.data;
+//   store.view = 'home';
+//   renderHomeHard(store);
+// };
 
 jQuery(function ($) {
 
@@ -72,8 +104,9 @@ jQuery(function ($) {
 
   // $(document).on('click', '.home-image', TRL_LIVE, triggerInsanity);
   // $(document).on('click', '.cascade', TRL_LIVE, triggerInsanity);
-  $(document).on('click', '.viewWork', TRL_LIVE, showTheDangWork);
   $(document).on('click', '.viewHome', TRL_LIVE, showTheDangHome);
+  $(document).on('click', '.viewWork', TRL_LIVE, showTheDangWork);
+  $(document).on('click', '.slideToHome', TRL_LIVE, hideTheDangWork);
   $(document).on('click', '.viewPlay', TRL_LIVE, showTheCoolStuff);
   $(document).on('click', '.viewConnect', TRL_LIVE, showTheDangConnect);
 
