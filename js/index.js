@@ -3,8 +3,18 @@
 
 const renderTheDangPage = function (store) {
   $('.view').hide();
-  $(`#${store.view}`).fadeIn(3000);
+  $(`#${store.view}`).show();
   console.log(store.view);
+};
+
+const slideUpTheDangWork = function (store) {
+  $(`#${store.view}`).show();
+  $('.slider').toggleClass('close');
+};
+
+const renderTheDangHome = function (store) {
+  $('.view').hide();
+  $(`#${store.view}`).fadeIn(3000);
 };
 
 
@@ -29,7 +39,7 @@ const showTheDangWork = function (event) {
   event.preventDefault();
   const store = event.data;
   store.view = 'work';
-  renderTheDangPage(store);
+  slideUpTheDangWork(store);
 };
 
 const showTheCoolStuff = function (event) {
@@ -50,7 +60,7 @@ const showTheDangHome = function (event) {
   event.preventDefault();
   const store = event.data;
   store.view = 'home';
-  renderTheDangPage(store);
+  renderTheDangHome(store);
 };
 
 jQuery(function ($) {
