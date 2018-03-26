@@ -1,6 +1,6 @@
 body {
   background-color: #F9F3E7;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "t26-carbon",monospace;
 }
 
 .view {
@@ -14,7 +14,7 @@ body {
 /* header styles for name and borders */
 
 .header-name-left, .header-name-right {
-  /* font-family: 'Didact Gothic', sans-serif; */
+  font-family: "franklin-gothic-urw-cond",sans-serif;
   position: fixed;
   color: #002266;
   text-align: center;
