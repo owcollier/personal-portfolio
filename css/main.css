@@ -1,26 +1,28 @@
 body {
   background-color: #F9F3E7;
   font-family: "t26-carbon",monospace;
+  overflow: hidden;
 }
 
 .view {
   background-color: #F9F3E7;
   display: none;
-  margin-top: 10%;
+  /* margin-top: 10%;
   margin-bottom: 10%;
   margin-left: 10%;
-  margin-right: 10%;
+  margin-right: 10%; */
   height: 100%;
+  overflow: scroll;
 }
 
-.slider {
+.work-slider {
   position: absolute;
   height: 100%;
   top: 0;
   transition: all 1s;
 }
 
-.slider.close {
+.work-slider.close {
   top: 100%;
   height: 0;
 }
@@ -136,6 +138,7 @@ body {
 }
 
 .hamburger-div {
+  z-index: 9999;
   position: fixed;
   height: 30px;
   width: 30px;
@@ -221,7 +224,9 @@ body {
 }
 
 .home-flex {
-  margin-top: 20%;
+  margin-top: 15%;
+  margin-left: 10%;
+  margin-right: 10%;
   display: flex;
   flex-direction: column;
 }
@@ -464,6 +469,9 @@ body {
   display: flex;
   flex-direction: column;
   border-bottom: 4px solid #ff5533;
+  margin-top: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .work-header-span-top {

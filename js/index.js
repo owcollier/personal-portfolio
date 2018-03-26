@@ -8,12 +8,12 @@ const renderTheDangPage = function (store) {
 };
 
 const slideUpTheDangWork = function (store) {
-  $('.slider').toggleClass('close');
+  $('.work-slider').toggleClass('close');
   console.log(store.view);
 };
 
 const slideDownTheDangWork = function(store) {
-  $('.slider').toggleClass('close');
+  $('.work-slider').toggleClass('close');
 };
 
 const renderTheDangHome = function (store) {
