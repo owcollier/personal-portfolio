@@ -12,20 +12,20 @@ const slideUpTheDangWork = function (store) {
   console.log(store.view);
 };
 
-const slideDownTheDangWork = function(store) {
+const slideDownTheDangWork = function() {
   $('.work-slider').toggleClass('close');
 };
 
 const renderTheDangHome = function (store) {
-  $(`#${store.view}`).fadeIn(3000);
+  $(`#${store.view}`).fadeIn(2000);
   $('#work').show();
   console.log(store.view);
 };
 
 const renderHomeHard = function (store) {
-  $('.slider').toggleClass('close');
+  $('.work-slider').toggleClass('close');
   $('.view').hide();
-  $(`#${store.view}`).fadeIn(3000);
+  $(`#${store.view}`).fadeIn(2000);
   $('#work').show();
   console.log(store.view);
 };
@@ -59,7 +59,7 @@ const hideTheDangWork = function (event) {
   event.preventDefault();
   const store = event.data;
   store.view = 'home';
-  slideDownTheDangWork(store);
+  slideDownTheDangWork();
 };
 
 const showTheCoolStuff = function (event) {
@@ -83,7 +83,6 @@ const showTheDangHome = function (event) {
     store.view = 'home';
     renderHomeHard(store);
   } else {
-    store.view = 'home';
     renderTheDangHome(store);
   }
 };
@@ -96,6 +95,14 @@ const showTheDangHome = function (event) {
 // };
 
 jQuery(function ($) {
+
+  $('.project-slides').slick({
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    prevArrow:'<a><span class="fas fa-angle-left slideshow-arrow"></span></a>',
+    nextArrow:'<a><span class="fas fa-angle-right slideshow-arrow"></span></a>'
+  });
 
   const TRL_LIVE = {
     view: 'home',
