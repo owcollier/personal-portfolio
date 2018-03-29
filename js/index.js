@@ -98,7 +98,7 @@ jQuery(function ($) {
 
   $('.project-slides').slick({
     infinite: true,
-    speed: 300,
+    speed: 1000,
     slidesToShow: 1,
     prevArrow:'<a><span class="fas fa-angle-left slideshow-arrow"></span></a>',
     nextArrow:'<a><span class="fas fa-angle-right slideshow-arrow"></span></a>'
