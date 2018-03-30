@@ -7,6 +7,18 @@ const renderTheDangPage = function (store) {
   console.log(store.view);
 };
 
+const renderTheDangModal = function (store) {
+  if (store.isModalVisible) {
+    store.isModalVisible = !store.isModalVisible;
+    $('#navModal').hide();
+    console.log('modal hidden');
+  } else {
+    store.isModalVisible = !store.isModalVisible;
+    $('#navModal').fadeIn(500);
+    console.log('modal visible');
+  }
+};
+
 const slideUpTheDangWork = function (store) {
   $('.work-slider').toggleClass('close');
   console.log(store.view);
@@ -62,20 +74,6 @@ const hideTheDangWork = function (event) {
   slideDownTheDangWork();
 };
 
-const showTheCoolStuff = function (event) {
-  event.preventDefault();
-  const store = event.data;
-  store.view = 'play';
-  renderTheDangPage(store);
-};
-
-const showTheDangConnect = function (event) {
-  event.preventDefault();
-  const store = event.data;
-  store.view = 'connect';
-  renderTheDangPage(store);
-};
-
 const showTheDangHome = function (event) {
   event.preventDefault();
   const store = event.data;
@@ -85,6 +83,12 @@ const showTheDangHome = function (event) {
   } else {
     renderTheDangHome(store);
   }
+};
+
+const toggleTheDangModal = function (event) {
+  event.preventDefault();
+  const store = event.data;
+  renderTheDangModal(store);
 };
 
 // const goHome = function (event) {
@@ -106,16 +110,14 @@ jQuery(function ($) {
 
   const TRL_LIVE = {
     view: 'home',
-    insanity: false
+    isModalVisible: false
   };
 
-  // $(document).on('click', '.home-image', TRL_LIVE, triggerInsanity);
+  $(document).on('click', '.toggle-modal', TRL_LIVE, toggleTheDangModal);
   // $(document).on('click', '.cascade', TRL_LIVE, triggerInsanity);
   $(document).on('click', '.viewHome', TRL_LIVE, showTheDangHome);
   $(document).on('click', '.viewWork', TRL_LIVE, showTheDangWork);
   $(document).on('click', '.slideToHome', TRL_LIVE, hideTheDangWork);
-  $(document).on('click', '.viewPlay', TRL_LIVE, showTheCoolStuff);
-  $(document).on('click', '.viewConnect', TRL_LIVE, showTheDangConnect);
 
   $('.viewHome').trigger('click');
 });
