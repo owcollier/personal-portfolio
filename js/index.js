@@ -19,6 +19,21 @@ const renderTheDangModal = function (store) {
   }
 };
 
+const scrollToNavDestination = function (store, destination) {
+  // console.log(destination);
+  store.isModalVisible = !store.isModalVisible;
+  $('#navModal').hide();
+  if (store.view === 'home' && destination === '#home') {
+    console.log('you already here!');
+  } else if (store.view === 'home' && destination !== '#home') {
+    store.view = 'work';
+    $('.work-slider').toggleClass('close');
+    $('.view').animate({
+      scrollTop: $(`${destination}`).position().top
+    }, 500);
+  }
+};
+
 const slideUpTheDangWork = function (store) {
   $('.work-slider').toggleClass('close');
   console.log(store.view);
@@ -59,6 +74,13 @@ const renderHomeHard = function (store) {
 //     $('.cascade').show();
 //   }
 // };
+
+const handleTheDangModalNav = function (event) {
+  event.preventDefault();
+  const store = event.data;
+  const destination = $(event.target).attr('href');
+  scrollToNavDestination(store, destination);
+};
 
 const showTheDangWork = function (event) {
   event.preventDefault();
@@ -112,6 +134,8 @@ jQuery(function ($) {
     view: 'home',
     isModalVisible: false
   };
+
+  $(document).on('click', '.nav-modal-link', TRL_LIVE, handleTheDangModalNav);
 
   $(document).on('click', '.toggle-modal', TRL_LIVE, toggleTheDangModal);
   // $(document).on('click', '.cascade', TRL_LIVE, triggerInsanity);

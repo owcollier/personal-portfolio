@@ -1,7 +1,12 @@
 /* general styles */
 
+html {
+  height: 100%;
+}
+
 body {
   /* background-color: #F9F3E7; */
+  height: 100%;
   background-color: white;
   font-family: "t26-carbon",monospace;
   overflow: hidden;
@@ -15,7 +20,6 @@ body {
   margin-bottom: 10%;
   margin-left: 10%;
   margin-right: 10%; */
-  height: 100%;
   overflow: scroll;
 }
 
