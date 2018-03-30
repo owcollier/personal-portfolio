@@ -25,9 +25,19 @@ const scrollToNavDestination = function (store, destination) {
   $('#navModal').hide();
   if (store.view === 'home' && destination === '#home') {
     console.log('you already here!');
-  } else if (store.view === 'home' && destination !== '#home') {
+  }
+  else if (store.view === 'home' && destination !== '#home') {
     store.view = 'work';
     $('.work-slider').toggleClass('close');
+    $('.view').animate({
+      scrollTop: $(`${destination}`).position().top
+    }, 500);
+  }
+  else if (store.view !== 'home' && destination === '#home') {
+    store.view = 'home';
+    $('.work-slider').toggleClass('close');
+  }
+  else if (store.view !== 'home' && destination !== '#home') {
     $('.view').animate({
       scrollTop: $(`${destination}`).position().top
     }, 500);
