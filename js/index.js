@@ -46,7 +46,6 @@ const scrollToNavDestination = function (store, destination) {
 
 const slideUpTheDangWork = function (store) {
   $('.work-slider').toggleClass('close');
-  console.log(store.view);
 };
 
 const slideDownTheDangWork = function() {
@@ -56,7 +55,6 @@ const slideDownTheDangWork = function() {
 const renderTheDangHome = function (store) {
   $(`#${store.view}`).fadeIn(2000);
   $('#work').show();
-  console.log(store.view);
 };
 
 const renderHomeHard = function (store) {
@@ -64,7 +62,6 @@ const renderHomeHard = function (store) {
   $('.view').hide();
   $(`#${store.view}`).fadeIn(2000);
   $('#work').show();
-  console.log(store.view);
 };
 
 
