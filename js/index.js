@@ -4,18 +4,15 @@
 const renderTheDangPage = function (store) {
   $('.view').hide();
   $(`#${store.view}`).show();
-  console.log(store.view);
 };
 
 const renderTheDangModal = function (store) {
   if (store.isModalVisible) {
     store.isModalVisible = !store.isModalVisible;
     $('#navModal').hide();
-    console.log('modal hidden');
   } else {
     store.isModalVisible = !store.isModalVisible;
     $('#navModal').fadeIn(500);
-    console.log('modal visible');
   }
 };
 
@@ -44,7 +41,7 @@ const scrollToNavDestination = function (store, destination) {
   }
 };
 
-const slideUpTheDangWork = function (store) {
+const slideUpTheDangWork = function () {
   $('.work-slider').toggleClass('close');
 };
 
@@ -64,24 +61,6 @@ const renderHomeHard = function (store) {
   $('#work').show();
 };
 
-
-
-// const triggerInsanity = function (event) {
-//   event.preventDefault();
-//   const store = event.data;
-//   if (store.insanity) {
-//     store.insanity = !store.insanity;
-//     $('svg').show();
-//     $('.insanity-background').hide();
-//     $('.cascade').hide();
-//   } else {
-//     store.insanity = !store.insanity;
-//     $('svg').hide();
-//     $('.insanity-background').show();
-//     $('.cascade').show();
-//   }
-// };
-
 const handleTheDangModalNav = function (event) {
   event.preventDefault();
   const store = event.data;
@@ -93,7 +72,7 @@ const showTheDangWork = function (event) {
   event.preventDefault();
   const store = event.data;
   store.view = 'work';
-  slideUpTheDangWork(store);
+  slideUpTheDangWork();
 };
 
 const hideTheDangWork = function (event) {
@@ -106,6 +85,8 @@ const hideTheDangWork = function (event) {
 const showTheDangHome = function (event) {
   event.preventDefault();
   const store = event.data;
+  const windowSize = window.innerWidth;
+  console.log('windowsize', windowSize);
   if (store.view !== 'home') {
     store.view = 'home';
     renderHomeHard(store);
@@ -120,13 +101,6 @@ const toggleTheDangModal = function (event) {
   renderTheDangModal(store);
 };
 
-// const goHome = function (event) {
-//   event.preventDefault();
-//   const store = event.data;
-//   store.view = 'home';
-//   renderHomeHard(store);
-// };
-
 jQuery(function ($) {
 
   $('.project-slides').slick({
@@ -139,6 +113,7 @@ jQuery(function ($) {
 
   const TRL_LIVE = {
     view: 'home',
+    isViewPortSmall: false,
     isModalVisible: false
   };
 
