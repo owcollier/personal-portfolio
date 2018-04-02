@@ -7,7 +7,6 @@ html {
 body {
   /* background-color: #F9F3E7; */
   height: 100%;
-  /* background: linear-gradient(to top,rgba(255, 185, 72, 0.4),rgba(255, 67, 173, 0.3), rgba(167, 50, 255, 0.2), rgba(255, 255, 255, 1)); */
   font-family: "t26-carbon",monospace;
   overflow: hidden;
 }
@@ -16,10 +15,6 @@ body {
   /* background-color: #F9F3E7; */
   background-color: white;
   display: none;
-  /* margin-top: 10%;
-  margin-bottom: 10%;
-  margin-left: 10%;
-  margin-right: 10%; */
   overflow: scroll;
 }
 
@@ -695,14 +690,16 @@ body {
   }
 
   .mobile-angle-down {
-    display: block;
-    text-align: center;
   }
 
   /* mobile styles for work */
 
   #work {
     margin-top: 2em;
+  }
+
+  .project-category {
+    margin-top: 4em;
   }
 
   .project-category-header {

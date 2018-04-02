@@ -154,6 +154,7 @@ jQuery(function ($) {
     infinite: true,
     speed: 1000,
     slidesToShow: 1,
+    adaptiveHeight: true,
     prevArrow:'<a><span class="fas fa-caret-left slideshow-arrow"></span></a>',
     nextArrow:'<a><span class="fas fa-caret-right slideshow-arrow"></span></a>'
   });
