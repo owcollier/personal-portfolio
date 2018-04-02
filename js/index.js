@@ -1,10 +1,20 @@
 /* global jQuery, $*/
 'use strict';
 
-const renderTheDangPage = function (store) {
-  $('.view').hide();
-  $(`#${store.view}`).show();
+// const renderTheDangPage = function (store) {
+//   $('.view').hide();
+//   $(`#${store.view}`).show();
+// };
+
+const mobileScrollToNavDestination = function (store, destination) {
+  store.isModalVisible = !store.isModalVisible;
+  $('#navModal').hide();
+  $('html, body').animate({
+    scrollTop: $(`${destination}`).position().top
+  }, 500);
 };
+
+// 
 
 const renderTheDangModal = function (store) {
   if (store.isModalVisible) {
@@ -15,6 +25,8 @@ const renderTheDangModal = function (store) {
     $('#navModal').fadeIn(500);
   }
 };
+
+// 
 
 const scrollToNavDestination = function (store, destination) {
   // console.log(destination);
@@ -41,6 +53,8 @@ const scrollToNavDestination = function (store, destination) {
   }
 };
 
+//
+
 const slideUpTheDangWork = function () {
   $('.work-slider').toggleClass('close');
 };
@@ -49,23 +63,31 @@ const slideDownTheDangWork = function() {
   $('.work-slider').toggleClass('close');
 };
 
-const renderTheDangHome = function (store) {
-  $(`#${store.view}`).fadeIn(2000);
+const renderTheDangHome = function () {
+  $('.view').hide();
+  $('#home').fadeIn(2000);
   $('#work').show();
 };
 
-const renderHomeHard = function (store) {
-  $('.work-slider').toggleClass('close');
+const renderHomeHard = function () {
   $('.view').hide();
-  $(`#${store.view}`).fadeIn(2000);
+  $('.work-slider').toggleClass('close');
+  $('#home').fadeIn(2000);
   $('#work').show();
 };
+
+// 
 
 const handleTheDangModalNav = function (event) {
   event.preventDefault();
   const store = event.data;
   const destination = $(event.target).attr('href');
-  scrollToNavDestination(store, destination);
+  const windowSize = window.innerWidth;
+  if (windowSize <= 800) {
+    mobileScrollToNavDestination(store, destination);
+  } else {
+    scrollToNavDestination(store, destination);
+  }
 };
 
 const showTheDangWork = function (event) {
@@ -86,20 +108,45 @@ const showTheDangHome = function (event) {
   event.preventDefault();
   const store = event.data;
   const windowSize = window.innerWidth;
-  console.log('windowsize', windowSize);
-  if (store.view !== 'home') {
+  if (windowSize <= 800) {
+    store.isViewPortSmall = true;
+    renderTheDangHome();
+  }
+  else if (store.view !== 'home') {
     store.view = 'home';
-    renderHomeHard(store);
+    renderHomeHard();
   } else {
-    renderTheDangHome(store);
+    renderTheDangHome();
   }
 };
+
+// 
 
 const toggleTheDangModal = function (event) {
   event.preventDefault();
   const store = event.data;
   renderTheDangModal(store);
 };
+
+//
+
+const checkWindowSize = function (event) {
+  event.preventDefault();
+  const store = event.data;
+  const windowSize = window.innerWidth;
+  if (windowSize <= 800 && store.isViewPortSmall === false) {
+    // console.log('rerender due to switch to small viewport');
+    store.isViewPortSmall = true;
+    renderHomeHard();
+  }
+  else if (windowSize > 800 && store.isViewPortSmall === true) {
+    // console.log('rerender due to switch to large viewport');
+    store.isViewPortSmall = false;
+    renderHomeHard();
+  }
+};
+
+// 
 
 jQuery(function ($) {
 
@@ -113,14 +160,15 @@ jQuery(function ($) {
 
   const TRL_LIVE = {
     view: 'home',
-    isViewPortSmall: false,
-    isModalVisible: false
+    isModalVisible: false,
+    isViewPortSmall: false
   };
+
+  $(window).on('DOMContentLoaded load resize scroll', TRL_LIVE, checkWindowSize);
 
   $(document).on('click', '.nav-modal-link', TRL_LIVE, handleTheDangModalNav);
 
   $(document).on('click', '.toggle-modal', TRL_LIVE, toggleTheDangModal);
-  // $(document).on('click', '.cascade', TRL_LIVE, triggerInsanity);
   $(document).on('click', '.viewHome', TRL_LIVE, showTheDangHome);
   $(document).on('click', '.viewWork', TRL_LIVE, showTheDangWork);
   $(document).on('click', '.slideToHome', TRL_LIVE, hideTheDangWork);
