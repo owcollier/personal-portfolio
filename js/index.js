@@ -155,8 +155,8 @@ jQuery(function ($) {
     speed: 1000,
     slidesToShow: 1,
     adaptiveHeight: true,
-    prevArrow:'<a><span class="fas fa-caret-left slideshow-arrow"></span></a>',
-    nextArrow:'<a><span class="fas fa-caret-right slideshow-arrow"></span></a>'
+    prevArrow:'<a><span class="fas fa-arrow-left"></span></a>',
+    nextArrow:'<a><span class="fas fa-arrow-right"></span></a>'
   });
 
   const TRL_LIVE = {

@@ -457,6 +457,7 @@ body {
 
 .slick-arrow svg {
   transition: transform 0.5s;
+  text-shadow: 2px 2px white;
 }
 
 .slick-arrow svg:hover {
