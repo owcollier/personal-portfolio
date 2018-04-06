@@ -463,16 +463,18 @@ body {
   display: flex;
   flex-direction: column;
   padding: 2%;
+  margin-left: 4%;
+  margin-right: 4%;
 }
 
 .project-block-description h4 {
   color: #0044CC;
-  font-size: 24px;
+  font-size: 36px;
   font-weight: 600;
 }
 
 .project-block-description p {
-  font-size: 20px;
+  font-size: 24px;
 }
 
 .project-slide-description-left {
@@ -702,6 +704,10 @@ body {
 
   .project-block-2 {
     margin-bottom: 0;
+  }
+
+  .project-block-description h4 {
+    font-size: 24px;
   }
 
   .project-block-description p {
