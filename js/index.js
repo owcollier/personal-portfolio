@@ -150,15 +150,6 @@ const checkWindowSize = function (event) {
 
 jQuery(function ($) {
 
-  $('.project-slides').slick({
-    infinite: true,
-    speed: 1000,
-    slidesToShow: 1,
-    adaptiveHeight: true,
-    prevArrow:'<a><span class="fas fa-arrow-left"></span></a>',
-    nextArrow:'<a><span class="fas fa-arrow-right"></span></a>'
-  });
-
   const TRL_LIVE = {
     view: 'home',
     isModalVisible: false,
