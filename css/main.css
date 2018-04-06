@@ -472,7 +472,7 @@ body {
 }
 
 .project-block-description p {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .project-slide-description-left {
@@ -483,7 +483,6 @@ body {
 }
 
 .project-block-2 {
-  margin-top: 2em;
   margin-left: 10%;
   margin-right: 10%;
   margin-bottom: 2em;
@@ -502,6 +501,13 @@ body {
 
 .project-slide-description-flex-inner-row-2 {
   margin-top: 1em;
+}
+
+.project-ul li{
+  font-size: 20px;
+  font-weight: 800;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .project-slide-description-left {
