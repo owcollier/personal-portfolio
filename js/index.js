@@ -160,7 +160,7 @@ jQuery(function ($) {
 
   $(document).on('click', '.nav-modal-link', TRL_LIVE, handleTheDangModalNav);
 
-  $(document).on('click', '.toggle-modal', TRL_LIVE, toggleTheDangModal);
+  $(document).on('click touch', '.toggle-modal', TRL_LIVE, toggleTheDangModal);
   $(document).on('click', '.viewHome', TRL_LIVE, showTheDangHome);
   $(document).on('click', '.viewWork', TRL_LIVE, showTheDangWork);
   $(document).on('click', '.slideToHome', TRL_LIVE, hideTheDangWork);
