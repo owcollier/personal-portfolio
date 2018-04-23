@@ -124,7 +124,7 @@
                                 <a class="project-link" target="_blank" href="https://react-cloud-generator.netlify.com/">https://react-cloud-generator.netlify.com/</a>
                                 <br>
                                 <br>
-                                <p>React Cloud Generator allows the user to create colorful, responsive word clouds based on text input. Word cloud generation and HTML5 Canvas magic courtesy of the react-tag-cloud library which uses d3-cloud under the hood.</p>
+                                <p>React Cloud Generator allows the user to create colorful, responsive word clouds based on text input. This project was a tentative step into the world of d3 and dynamic data visualization via HTML5 Canvas - the implementation is simple but it's fun to play with and satisfying to see working in the browser. Word cloud generation and HTML5 Canvas magic courtesy of the react-tag-cloud library which uses d3-cloud under the hood.</p>
                             </div>
                         </div>
                         <div class="project-block-2">
@@ -147,7 +147,7 @@
                                 <a class="project-link" target="_blank" href="https://wizardly-5e.herokuapp.com/">https://wizardly-5e.herokuapp.com/</a>
                                 <br>
                                 <br>
-                                <p>I'm a big fan of playing a Wizard in Dungeons &amp; Dragons, so I wanted to build an app that helps to manage some dimension of the class. I figured the spell book was the best place to start! Wizardly 5e is a fifth edition D&amp;D wizard spell book management app. It allows the user to easily add, inspect, manage, and remove spells from a character-specific spell book interface.</p>                   
+                                <p>I'm a big fan of playing a Wizard in Dungeons &amp; Dragons, so I wanted to build an app that helps to manage some dimension of the class. I figured the spell book was the best place to start, so I built Wizardly 5e as a fifth edition D&amp;D wizard spell book management app. It allows the user to easily add, inspect, manage, and remove spells from a character-specific spell book interface.</p>                   
                             </div>
                         </div>
                         <div class="project-block-2">
@@ -169,7 +169,8 @@
                                     <a class="project-link" target="_blank" href="https://frenchflashcards.netlify.com/">https://frenchflashcards.netlify.com/</a>
                                     <br>
                                     <br>
-                                    <p>French Flash Cards is a language learning application that presents the user with a set of French vocabulary flash cards for "spaced repetition" based practice. The concept of spaced repetition learning asserts that a smarter approach to retaining knowledge is to review what you have a weaker grasp on more often, and review what you have a stronger grasp on less often. In the context of flash cards, this means that cards the user has answered incorrectly should reappear at a greater frequency than cards the user has answered correctly.
+                                    <p>French Flash Cards is a language learning application that presents the user with a set of French vocabulary flash cards for "spaced repetition" based practice. The concept of spaced repetition learning asserts that a smarter approach to retaining knowledge is to review what you have a weaker grasp on more often, and review what you have a stronger grasp on less often. In the context of flashcards, this means that cards the user has answered incorrectly should reappear at a greater frequency than cards the user has answered correctly.<br><br>
+                                        My approach to implementing the spaced repetition pattern is an algorithm embedded server-side that handles user input during the exercises and addresses the data structure of the flash cards accordingly. The flashcards are arranged in linked list data structure, with each possessing a "memory strength" property in the database model. When a user answers a flashcard correctly, the value for a card's memory strength increases and the algorithm pushes the position of that card further back in the linked list. If the flashcard is answered incorrectly, the card's memory strength is reset to a default value and the flash card will reappear closer to the head of the linked list, thus increasing the frequency of that flashcard in the learning exercise. </p>
                                 </div>
                             </div>
                             <div class="project-block-2">
