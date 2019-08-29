@@ -15,7 +15,7 @@ body {
   /* background-color: #F9F3E7; */
   background-color: white;
   display: none;
-  overflow: scroll;
+  overflow: auto;
 }
 
 /* styles for sliding content */
